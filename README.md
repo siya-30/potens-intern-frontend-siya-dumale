@@ -192,7 +192,7 @@ Some of the major decisions while building this project:
 ## 1. Clone Repository
 
 ```bash
-git clone <https://github.com/siya-30/potens-intern-frontend-siya-dumale>
+git clone <potens-intern-frontend-siya-dumale>
 ```
 
 ---
