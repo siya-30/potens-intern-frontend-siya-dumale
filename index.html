@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Nivaad</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+
+  <link
+    rel="manifest"
+    href="manifest.json"
+  >
+  <link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+
+      <div class="logo">
+
+        <i class="fa-solid fa-city"></i>
+
+        <span>Nivaad</span>
+
+      </div>
+
+      <select id="langSelect">
+
+        <option value="en">
+          English
+        </option>
+
+        <option value="hi">
+          हिन्दी
+        </option>
+
+        <option value="mr">
+          मराठी
+        </option>
+
+      </select>
+
+    </div>
+
+
+
+    <!-- PROGRESS -->
+    <div class="progress">
+
+      <div
+        class="progress-bar"
+        id="progressBar"
+      ></div>
+
+    </div>
+
+
+
+    <!-- SCREEN 1 -->
+    <section
+      id="screen1"
+      class="screen active"
+    >
+
+      <h1
+        class="main-heading"
+        id="mainHeading"
+      >
+        Civic Issue Reporting
+      </h1>
+
+      <p id="subtitle">
+        Your city, heard better.
+      </p>
+
+
+
+      <div class="categories">
+
+        <div
+          class="card"
+          id="card1"
+        >
+
+          <span class="emoji-icon">
+            🚧
+          </span>
+
+          <span id="card1Text">
+            Pothole
+          </span>
+
+        </div>
+
+
+
+        <div
+          class="card"
+          id="card2"
+        >
+
+          <span class="emoji-icon">
+            🗑️
+          </span>
+
+          <span id="card2Text">
+            Garbage
+          </span>
+
+        </div>
+
+
+
+        <div
+          class="card"
+          id="card3"
+        >
+
+          <span class="emoji-icon">
+            💧
+          </span>
+
+          <span id="card3Text">
+            Water Leakage
+          </span>
+
+        </div>
+
+
+
+        <div
+          class="card"
+          id="card4"
+        >
+
+          <span class="emoji-icon">
+            💡
+          </span>
+
+          <span id="card4Text">
+            Streetlight
+          </span>
+
+        </div>
+
+
+
+        <div
+          class="card"
+          data-category="other"
+        >
+
+          <span class="emoji-icon">
+            ❓
+          </span>
+
+          <span id="otherText">
+            Other Issue
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <button id="continueBtn">
+        Continue
+      </button>
+
+    </section>
+
+
+
+    <!-- SCREEN 2 -->
+    <section
+      id="screen2"
+      class="screen"
+    >
+
+      <h2 id="detailsTitle">
+        Describe the Issue
+      </h2>
+
+
+
+      <textarea
+        id="issueText"
+        placeholder="Describe the issue here..."
+      ></textarea>
+
+
+
+      <label class="upload-box">
+
+        <span class="emoji-icon">
+          🖼️
+        </span>
+
+        <span id="uploadText">
+          Upload Image
+        </span>
+
+        <input
+          type="file"
+          id="imageUpload"
+          multiple
+          accept="image/*"
+        >
+
+      </label>
+
+
+
+      <div id="previewContainer"></div>
+
+
+
+      <button id="voiceBtn">
+
+        <span id="voiceText">
+
+  <i class="fa-solid fa-microphone"></i>
+
+  Voice Input
+
+</span>
+
+      </button>
+
+
+
+      <button id="submitBtn">
+        Submit Report
+      </button>
+
+
+
+      <div class="bottom-actions">
+
+        <button id="backBtn">
+
+          <span id="backText">
+            Go Back
+          </span>
+
+        </button>
+
+
+
+        <button id="resetBtn">
+
+          <span id="resetText">
+            Reset
+          </span>
+
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- SCREEN 3 -->
+    <section
+      id="screen3"
+      class="screen"
+    >
+
+      <div class="success">
+        🎉
+      </div>
+
+
+
+      <h2 id="successTitle">
+        Report Submitted Successfully!
+      </h2>
+
+
+
+      <p id="refId"></p>
+
+      <p id="submissionTime"></p>
+
+      <p id="issueCategory"></p>
+
+
+
+      <!-- TIMELINE -->
+      <div class="timeline">
+
+        <div class="timeline-item active">
+
+          <div class="dot"></div>
+
+          <div class="timeline-content">
+
+            <h4 id="draftedTitle">
+              Drafted
+            </h4>
+
+            <p id="draftedDesc">
+              Issue details captured
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="timeline-item active">
+
+          <div class="dot"></div>
+
+          <div class="timeline-content">
+
+            <h4 id="queuedTitle">
+              Queued
+            </h4>
+
+            <p id="queuedDesc">
+              Stored safely on device
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="timeline-item active">
+
+          <div class="dot"></div>
+
+          <div class="timeline-content">
+
+            <h4 id="syncedTitle">
+              Synced
+            </h4>
+
+            <p id="syncedDesc">
+              Sent to civic system
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+          <div class="dot"></div>
+
+          <div class="timeline-content">
+
+            <h4 id="resolvedTitle">
+              Resolved
+            </h4>
+
+            <p id="resolvedDesc">
+              Awaiting authority action
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <p
+        class="success-message"
+        id="successMessage"
+      >
+        Your report has been securely submitted to the civic support system.
+      </p>
+
+
+
+      <button
+        onclick="location.reload()"
+        id="submitAnotherBtn"
+      >
+        Submit Another
+      </button>
+
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
