@@ -8,6 +8,20 @@ The application allows users to report civic problems through a clean mobile-fir
 
 ---
 
+# Live Demo
+
+https://beautiful-frangollo-5d4963.netlify.app
+
+---
+
+# Loom Walkthrough
+
+[Add your Loom link here]
+
+---
+
+This project was built as part of the Potens Frontend Internship Assignment 2026.
+
 # Features
 
 * Multilingual support (English, Hindi, Marathi)
